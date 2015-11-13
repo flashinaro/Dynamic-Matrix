@@ -115,7 +115,7 @@ class Matrix
 			return listSize;
 		}
 		
-		Returns Matrix object value at(r,c) location
+		//Returns Matrix object value at(r,c) location
 		public int getValue(int r, int c)
 		{
 			int a = (Integer)list.get(c+numCols*r);
@@ -127,7 +127,8 @@ class Matrix
 		{
 			list.set(c+numCols*r,value);
 		}
-	
+		
+		//Displays Matrix object in two-dimensional matrix format
 		public void displayMatrix(String str)
 		{
 			System.out.println(str);
@@ -148,6 +149,8 @@ class Matrix
 				
 		}
 		
+		//Resizes Matrix object to new rows x cols size, copies all possible
+		//previous values and initializes new elements to zero
 		public void resize(int rows, int cols)
 		{			
 		
