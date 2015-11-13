@@ -6,6 +6,8 @@
 //Period 5
 //CompSci II AP
 //In this lab I will demonstrate my understanding of Arrays, ArrayLists, Matrix
+//
+//100 Point Version
 //*****************************************************************************
 import java.util.ArrayList;
 
@@ -60,6 +62,7 @@ class Matrix
 	private int numRows;	//number of rows in the Matrix
 	private int numCols;	//numbers of cols in the Matrix
 	
+	//Costructs empty ArrayList and sets all values to 0
 	public Matrix()
 	{
 		numRows = 0;
@@ -68,6 +71,7 @@ class Matrix
 		listSize = 0;  
 	}
 	
+	//Constructs r x c matrix all elements initialized to 0
 	public Matrix(int r, int c)
 	{
 		list = new ArrayList();
@@ -80,6 +84,7 @@ class Matrix
 			list.add(new Integer(0));
 	}
 	
+	//Constructs r x c matrix with all elements initialized to value
 	public Matrix(int r, int c, int value)
 	{
 		numRows = r;
@@ -92,27 +97,32 @@ class Matrix
 	} 
 			
 		
+		//Returns numRows value
 		public int getRows()
 		{
 			return numRows;
 		}
 		
+		//Returns numCols value
 		public int getCols()
 		{
 			return numCols;
 		}
 		
+		//Returns listSize value
 		public int getSize()
 		{
 			return listSize;
 		}
 		
+		Returns Matrix object value at(r,c) location
 		public int getValue(int r, int c)
 		{
 			int a = (Integer)list.get(c+numCols*r);
 			return a;	
 		}
 		
+		//Alters Matrix object value at (r,c) to value
 		public void setValue(int r, int c, int value)
 		{
 			list.set(c+numCols*r,value);
